@@ -1,7 +1,7 @@
- /* Copyright (c) 2020 MTHS All rights reserved
+/* Copyright (c) 2020 MTHS All rights reserved
  *
  * Created by: Kyle Lyver
- * Created on: Oct 2023 
+ * Created on: Oct 2023
  * This program counts down with neopixels
 */
 
@@ -23,18 +23,18 @@ basic.showIcon(IconNames.Happy)
 input.onButtonPressed(Button.A, function () {
   loopCounter = 4
   basic.clearScreen()
-    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.White))
-    neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.White))
-    neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.White))
-    neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.White))
-  
+  neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.White))
+  neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.White))
+  neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.White))
+  neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.White))
+
   // 4 neopixels
   while (loopCounter >= 0) {
     basic.showNumber(loopCounter)
     neopixelStrip.show()
     pause(1000)
-    
+
     loopCounter = loopCounter - 1
     neopixelStrip.setPixelColor(loopCounter, neopixel.colors(NeoPixelColors.Black))
-    }
+  }
 })
